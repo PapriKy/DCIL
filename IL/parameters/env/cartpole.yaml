@@ -1,0 +1,5 @@
+# @package _global_
+
+env:
+  name: CartPole-v1
+

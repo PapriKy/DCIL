@@ -1,0 +1,42 @@
+K: 4
+buffer:
+  batch_size: 64
+  select_all: false
+  subsample_frequency: 1
+  total_size: 500000
+  traj_num: 5
+cuda_deterministic: false
+defaults:
+- _self_
+- agent: softq
+- env: acrobot
+device: cpu
+episode_step: 50
+epoch: 1100
+extra_dims: 6
+gamma: 0.99
+hydra:
+  job:
+    chdir: false
+  output_subdir: null
+  run:
+    dir: .
+method:
+  alpha: 0.5
+  chi: true
+  constrain: false
+  div: null
+  grad_pen: false
+  lambda_gp: 10
+  loss: value_expert
+  mix_coeff: 1
+  regularize: false
+  tanh: false
+  type: iq
+n_env: 2
+num_actor_updates: 1
+seed: 2025
+test_step: 500
+train:
+  soft_update: false
+  use_target: true
